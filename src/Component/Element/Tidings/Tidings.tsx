@@ -14,12 +14,12 @@ const useTidingsHook = () => {
 
   const warningTidings: ProviderContext["enqueueSnackbar"] = (
     message,
-    options
+    options,
   ) => enqueueSnackbar(message, { variant: "warning", ...options });
 
   const successTidings: ProviderContext["enqueueSnackbar"] = (
     message,
-    options
+    options,
   ) => enqueueSnackbar(message, { variant: "success", ...options });
 
   const errorTidings: ProviderContext["enqueueSnackbar"] = (message, options) =>
@@ -27,7 +27,7 @@ const useTidingsHook = () => {
 
   const defaultTidings: ProviderContext["enqueueSnackbar"] = (
     message,
-    options
+    options,
   ) => enqueueSnackbar(message, { variant: "default", ...options });
 
   const closeTidings: ProviderContext["closeSnackbar"] = (key) =>
