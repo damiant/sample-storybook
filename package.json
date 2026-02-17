@@ -39,8 +39,8 @@
     "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "lint:check": "eslint --ext .tsx,.ts ./src",
     "lint:fix": "eslint --fix --ext .tsx,.ts ./src"
   },
@@ -73,16 +73,8 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.8",
-    "@storybook/addon-essentials": "^6.5.8",
-    "@storybook/addon-interactions": "^6.5.8",
-    "@storybook/addon-links": "^6.5.8",
-    "@storybook/builder-webpack5": "^6.5.8",
-    "@storybook/manager-webpack5": "^6.5.8",
-    "@storybook/node-logger": "^6.5.8",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.8",
-    "@storybook/testing-library": "^0.0.11",
-    "@types/lodash-es": "^4.17.6"
+    "@storybook/react-webpack5": "^10.2.0",
+    "@types/lodash-es": "^4.17.6",
+    "storybook": "^10.2.0"
   }
 }
