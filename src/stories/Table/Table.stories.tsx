@@ -1,14 +1,20 @@
-import { ComponentMeta } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
 import { data } from "./dataProvider";
 import { Table } from "../../Component";
 
-export default {
+const meta: Meta<typeof Table> = {
   title: "Table",
   component: Table,
-} as ComponentMeta<typeof Table>;
+};
 
-export const MyTable = () => {
-  const { columns, rows } = data;
-  return <Table columns={columns} rows={rows} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const MyTable: Story = {
+  render: () => {
+    const { columns, rows } = data;
+    return <Table columns={columns} rows={rows} />;
+  },
 };
