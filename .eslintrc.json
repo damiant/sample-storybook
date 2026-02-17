@@ -26,7 +26,13 @@
     ],
     "rules": {
         "prettier/prettier": "error",
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ]
     }
 }

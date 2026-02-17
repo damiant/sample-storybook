@@ -1,4 +1,5 @@
 import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 //Component
 import { IconButton } from "@mui/material";
@@ -10,22 +11,13 @@ import { Delete } from "@mui/icons-material";
 //Constants
 import { tidingsList } from "./constants";
 
-export default {
+const meta: Meta<typeof TidingsProvider> = {
   title: "Tidings",
   component: TidingsProvider,
 };
 
-export const Tidings = () => {
-  return (
-    <TidingsProvider>
-      <React.Fragment>
-        {tidingsList.map((value) => (
-          <ButtonComponent key={value} buttonText={value} />
-        ))}
-      </React.Fragment>
-    </TidingsProvider>
-  );
-};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const ButtonComponent = ({ buttonText }: { buttonText: string }) => {
   const {
@@ -79,4 +71,18 @@ const ButtonComponent = ({ buttonText }: { buttonText: string }) => {
       {buttonText}
     </Button>
   );
+};
+
+export const Tidings: Story = {
+  render: () => {
+    return (
+      <TidingsProvider>
+        <React.Fragment>
+          {tidingsList.map((value) => (
+            <ButtonComponent key={value} buttonText={value} />
+          ))}
+        </React.Fragment>
+      </TidingsProvider>
+    );
+  },
 };

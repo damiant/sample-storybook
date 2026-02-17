@@ -24,8 +24,8 @@
     "@types/node": "^16.11.39",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "lodash-es": "^4.17.21",
     "notistack": "^2.0.5",
     "react": "^18.1.0",
@@ -39,8 +39,8 @@
     "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "lint:check": "eslint --ext .tsx,.ts ./src",
     "lint:fix": "eslint --fix --ext .tsx,.ts ./src"
   },
@@ -73,16 +73,12 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.8",
-    "@storybook/addon-essentials": "^6.5.8",
-    "@storybook/addon-interactions": "^6.5.8",
-    "@storybook/addon-links": "^6.5.8",
-    "@storybook/builder-webpack5": "^6.5.8",
-    "@storybook/manager-webpack5": "^6.5.8",
-    "@storybook/node-logger": "^6.5.8",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.8",
-    "@storybook/testing-library": "^0.0.11",
-    "@types/lodash-es": "^4.17.6"
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^8.6.14",
+    "@storybook/preset-create-react-app": "^8.6.14",
+    "@storybook/react-webpack5": "^8.6.14",
+    "@types/lodash-es": "^4.17.6",
+    "storybook": "^8.6.14"
   }
 }
